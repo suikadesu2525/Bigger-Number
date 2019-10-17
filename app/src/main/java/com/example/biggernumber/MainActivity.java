@@ -20,13 +20,38 @@ public class MainActivity extends AppCompatActivity {
         final Button userButton2 = findViewById(R.id.userSelect2);
         final TextView userOption = findViewById(R.id.displayNumber);
         final TextView userOption2 = findViewById(R.id.displayNumber2);
+        final TextView selectResult = findViewById(R.id.selectResult);
+
         generateRandom();
         userOption.setText(String.valueOf(userNumber1));
         userOption2.setText(String.valueOf(userNumber2));
+
+
         userButton.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
+
+                if (checkOption(userNumber1, userNumber2) == true) {
+                    selectResult.setText("Congratulations!");
+                }
+                else {
+                    selectResult.setText("Too bad, try again!");
+                }
+                generateRandom();
+                userOption.setText(String.valueOf(userNumber1));
+                userOption2.setText(String.valueOf(userNumber2));
+            }
+        });
+        userButton2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (checkOption(userNumber2, userNumber1) == true) {
+                    selectResult.setText("Congratulations!");
+                }
+                else {
+                    selectResult.setText("Too bad, try again!");
+                }
                 generateRandom();
                 userOption.setText(String.valueOf(userNumber1));
                 userOption2.setText(String.valueOf(userNumber2));
@@ -36,9 +61,22 @@ public class MainActivity extends AppCompatActivity {
 
     private void generateRandom() {
         Random randomNum = new Random();
+
+            userNumber1 = randomNum.nextInt(100);
+            userNumber2 = randomNum.nextInt(100);
         while (userNumber1 == userNumber2) {
             userNumber1 = randomNum.nextInt(100);
             userNumber2 = randomNum.nextInt(100);
+            break;
         }
     }
+    private boolean checkOption(int userOption, int otherOption) {
+        if (userOption > otherOption) {
+            return true;
+    }
+        else {
+            return false;
+        }
+    }
+
 }
