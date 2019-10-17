@@ -7,7 +7,8 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/displayNumber2"
+        android:id="@+id/randomNumber2"
+        android:gravity="center"
         android:layout_width="104dp"
         android:layout_height="32dp"
         android:layout_marginStart="240dp"
@@ -33,7 +34,8 @@
         app:layout_constraintVertical_bias="0.594" />
 
     <TextView
-        android:id="@+id/displayNumber"
+        android:id="@+id/randomNumber"
+        android:gravity="center"
         android:layout_width="88dp"
         android:layout_height="36dp"
         android:layout_marginStart="68dp"
@@ -60,8 +62,8 @@
 
     <TextView
         android:id="@+id/selectResult"
-        android:layout_width="206dp"
-        android:layout_height="124dp"
+        android:layout_width="313dp"
+        android:layout_height="106dp"
         android:textSize="36sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -69,5 +71,32 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.339" />
+
+    <TextView
+        android:id="@+id/userScoreLabel"
+        android:layout_width="231dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="28dp"
+        android:text="@string/guess_label"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.088"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/userScore"
+        android:layout_width="78dp"
+        android:layout_height="34dp"
+        android:textSize="18sp"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.753"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.04" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
