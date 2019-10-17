@@ -3,4 +3,5 @@
     <string name="user_select2">Bigger</string>
     <string name="user_select">Bigger</string>
     <string name="guess_label">Number of correct guesses:</string>
+    <string name="user_lives_label">Number of lives:</string>
 </resources>
