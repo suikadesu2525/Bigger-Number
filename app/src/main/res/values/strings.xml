@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Bigger Number</string>
+    <string name="user_select2">Bigger</string>
+    <string name="user_select">Bigger</string>
+</resources>
